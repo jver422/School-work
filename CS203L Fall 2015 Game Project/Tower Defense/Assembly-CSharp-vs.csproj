@@ -46,8 +46,31 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\BombScript.cs" />
+     <Compile Include="Assets\Scripts\Currency.cs" />
+     <Compile Include="Assets\Scripts\CurrencyText.cs" />
      <Compile Include="Assets\Scripts\DefendableObject.cs" />
+     <Compile Include="Assets\Scripts\DifficultyManager.cs" />
+     <Compile Include="Assets\Scripts\EnemyController.cs" />
+     <Compile Include="Assets\Scripts\EnemyGenerator.cs" />
+     <Compile Include="Assets\Scripts\EnemyTemp.cs" />
+     <Compile Include="Assets\Scripts\FfwdButton.cs" />
+     <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\GameOverScreen.cs" />
+     <Compile Include="Assets\Scripts\MusicPlayer.cs" />
+     <Compile Include="Assets\Scripts\NextLevel.cs" />
+     <Compile Include="Assets\Scripts\NextWaveButton.cs" />
+     <Compile Include="Assets\Scripts\NinjaMonkeyAffectScript.cs" />
+     <Compile Include="Assets\Scripts\OnPathTraps.cs" />
+     <Compile Include="Assets\Scripts\PauseMenuScript.cs" />
+     <Compile Include="Assets\Scripts\ProjectileScript.cs" />
+     <Compile Include="Assets\Scripts\SaveFileManager.cs" />
+     <Compile Include="Assets\Scripts\StoreScript.cs" />
+     <Compile Include="Assets\Scripts\TowerRange.cs" />
+     <Compile Include="Assets\Scripts\TowerScript.cs" />
+     <Compile Include="Assets\Scripts\TrapController.cs" />
      <Compile Include="Assets\Scripts\UI.cs" />
+     <Compile Include="Assets\Scripts\VolumeController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

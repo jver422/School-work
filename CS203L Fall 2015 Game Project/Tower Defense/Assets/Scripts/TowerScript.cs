@@ -7,6 +7,7 @@ public class TowerScript : MonoBehaviour {
     private bool isSelected = false;
     private bool isPlanted = false;
     private bool canBePlanted = true;
+	private float nextFire;
     public float rateOfFire = 0.5f;
     public int levelMultiplier = 1;
     public GameObject shot;
@@ -30,14 +31,20 @@ public class TowerScript : MonoBehaviour {
 
         if (TR.Enemies.Count > 0)
         {
-            fire();
-        }
+			if (Time.time > nextFire) 
+			{
+				nextFire = Time.time + rateOfFire;
+            	fire();
+			}
+		}
 
-
-        Vector3 TargetPosition = new Vector3(TR.Enemies[0].transform.position.x, TR.Enemies[0].transform.position.y, 0);
-        TargetPosition = TargetPosition - transform.position;
-        float angle = Mathf.Atan2(TargetPosition.y, TargetPosition.x) * Mathf.Rad2Deg-180;
-        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+		if (TR.Enemies.Count > 0) 
+		{
+			Vector3 TargetPosition = new Vector3 (TR.Enemies [0].transform.position.x, TR.Enemies [0].transform.position.y, 0);
+			TargetPosition = TargetPosition - transform.position;
+			float angle = Mathf.Atan2 (TargetPosition.y, TargetPosition.x) * Mathf.Rad2Deg - 180;
+			transform.rotation = Quaternion.AngleAxis (angle, Vector3.forward);
+		}
         
 	}
 
