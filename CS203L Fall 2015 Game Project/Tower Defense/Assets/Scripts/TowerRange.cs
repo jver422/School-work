@@ -14,18 +14,6 @@ public class TowerRange : MonoBehaviour {
 	    Enemies = new List<GameObject>();
 	}
 
-    //void Update()
-    //{
-    //    Vector3 TargetPosition = new Vector3(Enemies[0].transform.position.x, Enemies[0].transform.position.y, 0);
-    //    TargetPosition = TargetPosition - transform.position;
-    //    float angle = Mathf.Atan2(TargetPosition.y, TargetPosition.x) * Mathf.Rad2Deg;
-    //    transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
-    //    if (Enemies.Count > 0)
-    //        Fire();
-
-    //}
-
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Enemy")
@@ -33,12 +21,6 @@ public class TowerRange : MonoBehaviour {
             Enemies.Add(col.gameObject);
         }
     }
-
-    //void Fire()
-    //{
-    //    Instantiate(shot, spawn.position, spawn.rotation);
-
-    //}
 
     void OnTriggerExit2D(Collider2D col)
     {

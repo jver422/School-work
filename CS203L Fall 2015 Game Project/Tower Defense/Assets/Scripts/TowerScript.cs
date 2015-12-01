@@ -76,16 +76,7 @@ public class TowerScript : MonoBehaviour {
 
     void fire()
     {
-        //finds the first enemy and assigns the target 
-        //if (target == null) target = TR.Enemies[0].transform;
-
-        //for (int i = 0; i < TR.Enemies.Count; i++)
-        //{
-        //    if (target.gameObject.GetComponent<EnemyController>().time < TR.Enemies[i].GetComponent<EnemyController>().time)
-        //        target = TR.Enemies[i].transform;
-        //}
-        //Debug.Log("Triggered");
-        //instantiate projectile code here
+       
         Instantiate(shot, spawn.position, spawn.rotation);
         
         Wait(rateOfFire / levelMultiplier);
